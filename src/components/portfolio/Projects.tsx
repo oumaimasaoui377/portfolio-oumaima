@@ -11,6 +11,7 @@ interface Project {
   category: Category[];
   icon: React.ElementType;
   color: "primary" | "accent";
+  link?: string;
 }
 
 const projects: Project[] = [
@@ -21,6 +22,7 @@ const projects: Project[] = [
     category: ["SLAM"],
     icon: Monitor,
     color: "primary",
+    link: "https://osaoui.free.nf/atelier_des_jeux/login.php",
   },
   {
     title: "Site e-commerce",
@@ -166,12 +168,23 @@ const Projects = () => {
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${
                   p.color === "primary" ? "bg-primary/10 text-primary" : "bg-accent/10 text-accent"
                 }`}>
-                  <p.icon size={20} />
+                  {<p.icon size={20} />}
                 </div>
                 <h3 className="font-display font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
                   {p.title}
                 </h3>
                 <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{p.desc}</p>
+                 {p.link && (
+                  <a 
+                    href={p.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-primary hover:underline mb-3"
+                  >
+                    <ExternalLink size={14} />
+                    Voir le projet
+                  </a>
+                )}
                 <div className="flex flex-wrap gap-1.5">
                   {p.tags.map((tag) => (
                     <span key={tag} className="px-2 py-0.5 rounded-md bg-secondary text-secondary-foreground text-xs">
