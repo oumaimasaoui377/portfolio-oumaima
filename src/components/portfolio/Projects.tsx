@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github, Code, Server, Shield, Database, Globe, Smartphone, Network, Monitor, FileCode } from "lucide-react";
+import { ExternalLink, Github, Code, Server, Shield, Database, Globe, Smartphone, Network, Monitor, FileCode, Clock } from "lucide-react";
 
 type Category = "Tous" | "SLAM" | "SISR" | "Transverse";
 
@@ -15,6 +15,14 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    title: "Application de pointage",
+    desc: "Application développée durant mon stage de 6 semaines chez Baudimont Arras, pour la gestion du pointage des employés : enregistrement des heures d'arrivée/départ, suivi des présences et génération de rapports.",
+    tags: ["PHP", "MySQL", "Stage Baudimont Arras"],
+    category: ["SLAM"],
+    icon: Clock,
+    color: "accent",
+  },
   {
     title: "Application de gestion de tickets",
     desc: "Système complet de ticketing pour le support informatique avec dashboard, gestion des priorités, attribution et suivi en temps réel. Développé en PHP/MySQL avec interface responsive.",
