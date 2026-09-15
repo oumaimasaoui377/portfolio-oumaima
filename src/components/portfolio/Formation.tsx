@@ -24,8 +24,8 @@ const timeline = [
     location: "Arras",
     desc: "Stage de 6 semaines réalisé chez Baudimont Arras dans le cadre du BTS SIO.",
     modules: [],
-    current: false,
     attestation: "/attestation-stage-baudimont.pdf",
+    current: false,
   },
   {
     period: "2024",
