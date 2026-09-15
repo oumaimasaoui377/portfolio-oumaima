@@ -14,7 +14,7 @@ const Hero = () => (
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <p className="text-primary font-medium mb-4 tracking-wider uppercase text-sm">
-          Étudiante BTS SIO — EPSI
+          Étudiante 2ème année — Gaston Berger
         </p>
         <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight mb-6">
           Oumaima<br />
@@ -38,7 +38,7 @@ const Hero = () => (
           {[
             { icon: Github, href: "https://github.com/oumaimasaoui377/" },
             { icon: Linkedin, href: "https://www.linkedin.com/in/oumaima-saoui-4b0a9a387/" },
-            { icon: Mail, href: "mailto:oumaima.saoui@ecoles-epsi.net" }, 
+            { icon: Mail, href: "mailto:oumaima.saoui@gastonberger.fr" }, 
           ].map(({ icon: Icon, href }, i) => (
             <a
               key={i}
