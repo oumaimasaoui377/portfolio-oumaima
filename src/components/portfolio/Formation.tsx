@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Calendar, MapPin, BookOpen } from "lucide-react";
+import { Calendar, MapPin, BookOpen, FileText } from "lucide-react";
 
 const timeline = [
   {
@@ -25,6 +25,7 @@ const timeline = [
     desc: "Stage de 6 semaines réalisé chez Baudimont Arras dans le cadre du BTS SIO.",
     modules: [],
     current: false,
+    attestation: "/attestation-stage-baudimont.pdf",
   },
   {
     period: "2024",
@@ -86,6 +87,17 @@ const Formation = () => (
                   </span>
                 ))}
               </div>
+            )}
+            {item.attestation && (
+              <a
+                href={item.attestation}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg bg-primary/10 text-primary text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors"
+              >
+                <FileText size={14} />
+                Voir l'attestation de stage
+              </a>
             )}
           </motion.div>
         ))}
