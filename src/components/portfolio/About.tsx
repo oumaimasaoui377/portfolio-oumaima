@@ -5,7 +5,7 @@ const highlights = [
   { icon: Code, label: "Développement Web", desc: "Applications front & back-end" },
   { icon: Server, label: "Infrastructure", desc: "Réseaux, serveurs, virtualisation" },
   { icon: Shield, label: "Cybersécurité", desc: "Sécurisation des SI" },
-  { icon: GraduationCap, label: "BTS SIO", desc: "Option SLAM / SISR" },
+  { icon: GraduationCap, label: "BTS SIO", desc: "Mention Très Bien" },
 ];
 
 const About = () => (
@@ -32,14 +32,16 @@ const About = () => (
           className="space-y-5 text-muted-foreground leading-relaxed"
         >
           <p>
-            Je suis <span className="text-foreground font-medium">Oumaima Saoui</span>, étudiante en 
+            Je suis <span className="text-foreground font-medium">Oumaima Saoui</span>, titulaire d'un 
             <span className="text-primary"> BTS SIO</span> (Services Informatiques aux Organisations) 
-            à l'<span className="text-primary">EPSI</span>.
+            obtenu à l'<span className="text-primary">EPSI</span> avec la mention Très Bien, et actuellement 
+            en <span className="text-primary">2ème année à Gaston Berger</span>.
           </p>
           <p>
-            Ma formation me permet d'acquérir des compétences variées en développement d'applications, 
-            gestion d'infrastructure réseau, cybersécurité et gestion de projets informatiques. 
-            Je suis motivée par les défis techniques et l'innovation.
+            Ma formation m'a permis d'acquérir des compétences variées en développement d'applications, 
+            gestion d'infrastructure réseau, cybersécurité et gestion de projets informatiques. J'ai également 
+            réalisé un stage de 6 semaines chez <span className="text-foreground font-medium">Baudimont Arras</span>, 
+            une expérience qui a renforcé ma pratique du terrain. Je suis motivée par les défis techniques et l'innovation.
           </p>
           <p>
             En parallèle de mes études, je réalise des projets personnels et professionnels 
