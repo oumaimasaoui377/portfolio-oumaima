@@ -29,9 +29,9 @@ const Contact = () => (
 
           <div className="space-y-4">
             {[
-              { icon: Mail, label: "oumaima.saoui@epsi.fr" },
+              { icon: Mail, label: "oumaima.saoui@gastonberger.fr" },
               { icon: Phone, label: "+33 6 85 86 66 79" },
-              { icon: MapPin, label: "EPSI Lille, France" },
+              { icon: MapPin, label: "Gaston Berger, France" },
             ].map(({ icon: Icon, label }, i) => (
               <div key={i} className="flex items-center gap-3 text-secondary-foreground">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
