@@ -17,7 +17,7 @@ const About = () => (
       >
         <p className="text-primary text-sm uppercase tracking-wider mb-2">À propos</p>
         <h2 className="font-display text-4xl font-bold mb-6">
-          Qui suis-<span className="text-gradient">je</span> ?
+          Mes <span className="text-gradient">motivations</span>
         </h2>
       </motion.div>
 
@@ -29,20 +29,24 @@ const About = () => (
           className="space-y-4 text-muted-foreground leading-relaxed"
         >
           <p>
-            Je m'appelle <span className="text-foreground font-medium">Oumaima Saoui</span>, étudiante
-            passionnée par le développement et les systèmes d'information. Après l'obtention de mon
-            <span className="text-foreground font-medium"> BTS SIO avec la mention Très Bien à l'EPSI</span>,
-            je poursuis actuellement ma <span className="text-foreground font-medium">2ème année à Gaston Berger</span>.
+            Ce qui m'a poussée vers l'informatique, c'est cette envie de comprendre comment les choses
+            fonctionnent vraiment derrière un écran, et surtout de pouvoir créer moi-même des solutions
+            qui répondent à de vrais besoins. Le <span className="text-foreground font-medium">BTS SIO</span>{" "}
+            m'a permis de découvrir aussi bien le développement que l'administration système, et j'ai
+            trouvé dans les deux une vraie satisfaction : celle de résoudre des problèmes concrets.
           </p>
           <p>
-            Curieuse et rigoureuse, j'aime comprendre le fonctionnement des systèmes, concevoir des
-            applications utiles et rester à jour sur les bonnes pratiques du développement et de la
-            cybersécurité. Mon stage chez <span className="text-foreground font-medium">Baudimont Arras</span> m'a
-            permis de mettre en pratique mes compétences en conditions réelles.
+            Je suis particulièrement motivée par la <span className="text-foreground font-medium">cybersécurité</span>{" "}
+            et la qualité du code : je n'aime pas me contenter de faire fonctionner une application, je
+            veux comprendre pourquoi elle fonctionne, et surtout comment la rendre plus robuste et plus
+            sûre. C'est aussi ce qui m'a menée à choisir mon thème de veille sur la sécurité des
+            applications web.
           </p>
           <p>
-            Je cherche aujourd'hui à approfondir mes compétences techniques tout en développant des
-            projets concrets, à la fois solides sur le plan technique et soignés dans leur présentation.
+            Aujourd'hui, ma motivation est de continuer à progresser techniquement tout en gardant une
+            vision globale des projets : comprendre les besoins, proposer des solutions adaptées, et les
+            réaliser avec rigueur. Mon objectif est de devenir une développeuse polyvalente, capable de
+            s'adapter aux évolutions rapides du numérique.
           </p>
         </motion.div>
 
