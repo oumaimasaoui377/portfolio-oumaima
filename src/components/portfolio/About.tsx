@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { GraduationCap, MapPin, Briefcase, Sparkles } from "lucide-react";
+import { GraduationCap, ShieldCheck, Workflow, Sparkles } from "lucide-react";
 
 const stats = [
-  { icon: GraduationCap, label: "BTS SIO — Mention Très Bien", value: "EPSI" },
-  { icon: MapPin, label: "2ème année en cours", value: "Gaston Berger" },
-  { icon: Briefcase, label: "Stage 6 semaines", value: "Baudimont Arras" },
+  { icon: GraduationCap, label: "BTS SIO — Option SLAM", value: "EPSI" },
+  { icon: ShieldCheck, label: "Stage en cybersécurité", value: "Expérience terrain" },
+  { icon: Workflow, label: "Passionnée par l'automatisation", value: "DevOps" },
 ];
 
 const About = () => (
@@ -29,24 +29,26 @@ const About = () => (
           className="space-y-4 text-muted-foreground leading-relaxed"
         >
           <p>
-            Ce qui m'a poussée vers l'informatique, c'est cette envie de comprendre comment les choses
-            fonctionnent vraiment derrière un écran, et surtout de pouvoir créer moi-même des solutions
-            qui répondent à de vrais besoins. Le <span className="text-foreground font-medium">BTS SIO</span>{" "}
-            m'a permis de découvrir aussi bien le développement que l'administration système, et j'ai
-            trouvé dans les deux une vraie satisfaction : celle de résoudre des problèmes concrets.
+            Je suis en <span className="text-foreground font-medium">BTS SIO, option SLAM</span> (Solutions
+            Logicielles et Applications Métiers), où je me spécialise dans le développement d'applications.
+            Mais mon parcours ne s'arrête pas là : j'ai effectué un{" "}
+            <span className="text-foreground font-medium">stage en cybersécurité</span>, une expérience qui
+            m'a ouvert les yeux sur l'importance de penser la sécurité dès la conception d'un projet, et
+            pas seulement en correction après coup.
           </p>
           <p>
-            Je suis particulièrement motivée par la <span className="text-foreground font-medium">cybersécurité</span>{" "}
-            et la qualité du code : je n'aime pas me contenter de faire fonctionner une application, je
-            veux comprendre pourquoi elle fonctionne, et surtout comment la rendre plus robuste et plus
-            sûre. C'est aussi ce qui m'a menée à choisir mon thème de veille sur la sécurité des
-            applications web.
+            Cette double expérience — développement et sécurité — m'a donné envie de devenir{" "}
+            <span className="text-foreground font-medium">double compétences</span> : coder proprement,
+            mais aussi comprendre comment sécuriser, déployer et automatiser ce que je construis. C'est
+            naturellement que je me suis découvert une vraie passion pour le{" "}
+            <span className="text-foreground font-medium">DevOps</span> : l'intégration continue, le
+            déploiement automatisé, la conteneurisation (Docker), et tout ce qui permet de faire le pont
+            entre développement et infrastructure.
           </p>
           <p>
-            Aujourd'hui, ma motivation est de continuer à progresser techniquement tout en gardant une
-            vision globale des projets : comprendre les besoins, proposer des solutions adaptées, et les
-            réaliser avec rigueur. Mon objectif est de devenir une développeuse polyvalente, capable de
-            s'adapter aux évolutions rapides du numérique.
+            Mon objectif est de continuer à monter en compétences sur ces deux fronts — développement
+            sécurisé et culture DevOps — pour devenir une professionnelle capable de livrer des
+            applications à la fois fiables, sécurisées et bien déployées.
           </p>
         </motion.div>
 
@@ -60,35 +62,4 @@ const About = () => (
               transition={{ delay: i * 0.1 }}
               className="glass-card p-5 flex items-center gap-4"
             >
-              <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                <s.icon size={20} />
-              </div>
-              <div>
-                <p className="text-foreground font-semibold">{s.value}</p>
-                <p className="text-muted-foreground text-sm">{s.label}</p>
-              </div>
-            </motion.div>
-          ))}
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="glass-card p-5 flex items-center gap-4"
-          >
-            <div className="w-11 h-11 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
-              <Sparkles size={20} />
-            </div>
-            <div>
-              <p className="text-foreground font-semibold">Curieuse & rigoureuse</p>
-              <p className="text-muted-foreground text-sm">Toujours en veille sur les nouvelles technologies</p>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-export default About;
+              <div
