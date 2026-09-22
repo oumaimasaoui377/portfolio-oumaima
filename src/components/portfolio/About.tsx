@@ -1,84 +1,90 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { GraduationCap, MapPin, Briefcase, Sparkles } from "lucide-react";
 
-const Hero = () => (
-  <section id="accueil" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-    {/* Background glow */}
-    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]" />
-    <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-accent/10 rounded-full blur-[120px]" />
+const stats = [
+  { icon: GraduationCap, label: "BTS SIO — Mention Très Bien", value: "EPSI" },
+  { icon: MapPin, label: "2ème année en cours", value: "Gaston Berger" },
+  { icon: Briefcase, label: "Stage 6 semaines", value: "Baudimont Arras" },
+];
 
-    <div className="max-w-7xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
+const About = () => (
+  <section id="apropos" className="py-24">
+    <div className="max-w-7xl mx-auto px-6">
       <motion.div
-        initial={{ opacity: 0, x: -40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
       >
-        <p className="text-primary font-medium mb-4 tracking-wider uppercase text-sm">
-          Étudiante 2ème année — Gaston Berger
-        </p>
-        <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight mb-6">
-          Oumaima<br />
-          <span className="text-gradient">Saoui</span>
-        </h1>
-        <p className="text-muted-foreground text-lg max-w-md mb-8 leading-relaxed">
-          Passionnée par le développement et les systèmes d'information. 
-          Je conçois des solutions numériques innovantes et fonctionnelles.
-        </p>
+        <p className="text-primary text-sm uppercase tracking-wider mb-2">À propos</p>
+        <h2 className="font-display text-4xl font-bold mb-6">
+          Qui suis-<span className="text-gradient">je</span> ?
+        </h2>
+      </motion.div>
 
-        <div className="flex items-center gap-4 mb-8">
-          <a href="#contact" className="px-6 py-3 bg-primary text-primary-foreground font-medium rounded-xl hover:opacity-90 transition-opacity">
-            Me contacter
-          </a>
-          <a href="#projets" className="px-6 py-3 border border-border text-foreground rounded-xl hover:bg-secondary transition-colors">
-            Voir mes projets
-          </a>
-        </div>
+      <div className="grid md:grid-cols-2 gap-12 items-start">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="space-y-4 text-muted-foreground leading-relaxed"
+        >
+          <p>
+            Je m'appelle <span className="text-foreground font-medium">Oumaima Saoui</span>, étudiante
+            passionnée par le développement et les systèmes d'information. Après l'obtention de mon
+            <span className="text-foreground font-medium"> BTS SIO avec la mention Très Bien à l'EPSI</span>,
+            je poursuis actuellement ma <span className="text-foreground font-medium">2ème année à Gaston Berger</span>.
+          </p>
+          <p>
+            Curieuse et rigoureuse, j'aime comprendre le fonctionnement des systèmes, concevoir des
+            applications utiles et rester à jour sur les bonnes pratiques du développement et de la
+            cybersécurité. Mon stage chez <span className="text-foreground font-medium">Baudimont Arras</span> m'a
+            permis de mettre en pratique mes compétences en conditions réelles.
+          </p>
+          <p>
+            Je cherche aujourd'hui à approfondir mes compétences techniques tout en développant des
+            projets concrets, à la fois solides sur le plan technique et soignés dans leur présentation.
+          </p>
+        </motion.div>
 
-        <div className="flex items-center gap-4">
-          {[
-            { icon: Github, href: "https://github.com/oumaimasaoui377/" },
-            { icon: Linkedin, href: "https://www.linkedin.com/in/oumaima-saoui-4b0a9a387/" },
-            { icon: Mail, href: "mailto:oumaima.saoui@gastonberger.fr" }, 
-          ].map(({ icon: Icon, href }, i) => (
-            <a
+        <div className="space-y-4">
+          {stats.map((s, i) => (
+            <motion.div
               key={i}
-              href={href}
-              className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary/80 transition-colors"
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="glass-card p-5 flex items-center gap-4"
             >
-              <Icon size={18} />
-            </a>
+              <div className="w-11 h-11 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                <s.icon size={20} />
+              </div>
+              <div>
+                <p className="text-foreground font-semibold">{s.value}</p>
+                <p className="text-muted-foreground text-sm">{s.label}</p>
+              </div>
+            </motion.div>
           ))}
-        </div>
-      </motion.div>
 
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className="hidden md:flex justify-center"
-      >
-        <div className="relative">
-          <div className="w-72 h-72 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center glow-primary animate-float">
-            <div className="w-60 h-60 rounded-full bg-secondary flex items-center justify-center">
-              <span className="font-display text-6xl font-bold text-gradient">OS</span>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="glass-card p-5 flex items-center gap-4"
+          >
+            <div className="w-11 h-11 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
+              <Sparkles size={20} />
             </div>
-          </div>
+            <div>
+              <p className="text-foreground font-semibold">Curieuse & rigoureuse</p>
+              <p className="text-muted-foreground text-sm">Toujours en veille sur les nouvelles technologies</p>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
     </div>
-
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 1.2 }}
-      className="absolute bottom-8 left-1/2 -translate-x-1/2"
-    >
-      <a href="#apropos" className="text-muted-foreground hover:text-primary transition-colors">
-        <ArrowDown size={24} className="animate-bounce" />
-      </a>
-    </motion.div>
   </section>
 );
 
-export default Hero;
-
+export default About;
