@@ -62,4 +62,19 @@ const About = () => (
               transition={{ delay: i * 0.1 }}
               className="glass-card p-5 flex items-center gap-4"
             >
-              <div
+              <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                <s.icon size={22} />
+              </div>
+              <div>
+                <p className="font-display font-semibold text-foreground">{s.value}</p>
+                <p className="text-muted-foreground text-sm">{s.label}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+export default About;
